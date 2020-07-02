@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :set_user, only: [:index, :new, :create, :edit]
-  before_action :set_task, only: [:edit, :update, :show]
+  before_action :set_user, only: [:index, :new, :create, :edit, :show]
+  before_action :set_task, only: [:edit, :update, :show, :destroy]
   
   def index
     @tasks = @user.tasks
@@ -35,10 +35,20 @@ class TasksController < ApplicationController
   def show
   end
   
+  def destroy
+    @task.destroy
+    flash[:success] = "タスクを削除しました。"
+    redirect_to user_tasks_url
+  end
+  
   private
     
     def set_task
       @task = Task.find(params[:id])
+    end
+    
+    def set_user
+      @user = User.find(params[:id])
     end
     
     def task_params
