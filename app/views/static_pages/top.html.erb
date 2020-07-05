@@ -6,12 +6,12 @@
       <p>TaskAppは簡易ToDo管理ツールです。</p>
       <p>↓↓初めてのご利用↓↓</p>
       <%= link_to "アカウント作成", new_user_path, class: "btn btn-lg btn-success" %>
-      <% unless logged_in? %>
-      <div style="margin-top: 10px">
-        <%= link_to "ゲストログイン（管理権限）", login_path, class: "btn btn-danger" %>
-        <%= link_to "ゲストログイン（一般権限）", login_path, class: "btn btn-warning" %>
-      </div>
-      <% end %>
+      <!--<% unless logged_in? %>-->
+      <!--<div style="margin-top: 10px">-->
+      <!--  <%= link_to "ゲストログイン（管理権限）", login_path, class: "btn btn-danger" %>-->
+      <!--  <%= link_to "ゲストログイン（一般権限）", login_path, class: "btn btn-warning" %>-->
+      <!--</div>-->
+      <!--<% end %>-->
     </div>
   </div>
   <div class="col-md-4">
