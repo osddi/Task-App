@@ -74,6 +74,10 @@ p {
   text-decoration: none;
 }
 
+#dropdown-title {
+  background-color: teal;
+}
+
 li .header-list {
   color: #fff !important;
   font-weight: bold;
@@ -153,6 +157,23 @@ li .dropdown-header {
 }
 
 #table-task td {
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+
+#table-tasks {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#table-tasks th {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#table-tasks td {
+  vertical-align: middle;
   word-wrap: break-word;
 }
 

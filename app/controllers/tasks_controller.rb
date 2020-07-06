@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
-  before_action :set_user, only: [:index, :create, :edit, :update, :show]
+  before_action :set_user
   before_action :set_task, only: [:edit, :update, :show, :destroy]
   before_action :logged_in_user
   before_action :correct_user
   
   def index
-    @tasks = @user.tasks
+    @tasks = @user.tasks.order(created_at: "DESC")
   end
   
   def new
